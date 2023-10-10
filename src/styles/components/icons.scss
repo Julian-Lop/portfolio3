@@ -1,0 +1,28 @@
+.icon{
+    content: '';
+    background: #FFF;
+    height: 25px;
+    width: 25px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+// SVG un solo color
+// {
+//     -webkit-mask-image: url('../../../public/svg/.svg');
+//     mask-image: url('../../../public/svg/.svg') 
+// }
+
+// SVG con colores
+// .icon-m{
+//     background-color: transparent;
+//     background-image: url('../../../public/svg/.svg');
+// }
+
