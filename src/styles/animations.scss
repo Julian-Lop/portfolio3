@@ -1,0 +1,30 @@
+@keyframes blurSmooth {
+    0% {
+        filter: blur(0px);
+    }
+
+    50%{
+        filter: blur(2px);
+    }
+
+    100% {
+        filter: blur(0px);
+    }
+}
+
+@keyframes fadeFromRight {
+    0%{
+        right: -600px;
+        filter: blur(10px);
+    }
+
+    80%{
+        right: 5px;
+        filter: blur(2px);
+    }
+
+    100%{
+        right: 0px;
+        filter: blur(0px);
+    }
+}

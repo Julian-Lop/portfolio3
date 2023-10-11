@@ -14,15 +14,39 @@
     mask-repeat: no-repeat;
 }
 
-// SVG un solo color
+// ? SVG un solo color
 // {
 //     -webkit-mask-image: url('../../../public/svg/.svg');
 //     mask-image: url('../../../public/svg/.svg') 
 // }
 
-// SVG con colores
-// .icon-m{
+// ? SVG con colores
+// {
 //     background-color: transparent;
 //     background-image: url('../../../public/svg/.svg');
 // }
 
+.icon-menu{
+    background-color: transparent;
+    background-image: url('../../../public/svg/IconMenu.svg');
+}
+
+.icon-user{
+    background-color: transparent;
+    background-image: url('../../../public/svg/IconUSer.svg');
+}
+
+.icon-skills{
+    background-color: transparent;
+    background-image: url('../../../public/svg/IconSkills.svg'); 
+}
+
+.icon-idea{
+    background-color: transparent;
+    background-image: url('../../../public/svg/IconIdea.svg');  
+}
+
+.icon-send{
+    background-color: transparent;
+    background-image: url('../../../public/svg/IconSend.svg');
+}

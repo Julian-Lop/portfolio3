@@ -1,3 +1,7 @@
 @use 'variables';
+
+@import './utils/Init.scss';
 @import 'mixin';
+@import 'animations.scss';
+@import './components/index.scss';
 @import './views/Home.scss';
