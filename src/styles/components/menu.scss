@@ -1,7 +1,7 @@
 .Menu{
     position: absolute;
     height: 100vh;
-    right: 0;
+    right: -600px;
     top: 0;
     background-color: variables.$color_white;
     box-shadow: -4px 0px 12px 4px rgba(128, 147, 255, 0.25);
@@ -10,7 +10,16 @@
     display: flex;
     flex-direction: column;
     gap: 56px;
-    animation: fadeFromRight 0.5s;
+
+    &.enabled{
+        right: 0;
+        animation: fadeFromRight 0.5s;
+    }
+    
+
+    &.disabled{
+        animation: hideFromRight 0.5s;
+    }
 
     @include mobile{
         gap: 40px;
@@ -43,6 +52,18 @@
                 }
     
                 color: variables.$color2;
+            }
+        }
+
+        &.active{
+            .icon{
+                transform: scale(1.2);
+                filter: drop-shadow(0px 4px 2px rgba(128, 147, 255, 0.50));
+                transition: all 0.25s;
+            }
+
+            a {
+                color: variables.$color2 !important;
             }
         }
 

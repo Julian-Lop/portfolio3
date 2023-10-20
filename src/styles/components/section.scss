@@ -1,0 +1,282 @@
+.Section{
+    margin-bottom: 80px;
+
+    @include mobile{
+        margin-bottom: 40px;
+    }
+
+    h1{
+        font-size: 80px;
+        font-family: variables.$fontBlack;
+        color: variables.$color5;
+        text-shadow: 0px 0px 8px rgba(128, 147, 255, 0.25);
+        filter: blur(0.5px);
+
+        border-right: 0px solid variables.$color2;
+        overflow: hidden;
+        white-space: nowrap;
+
+        animation: typewriter 2s steps(13), blink 0.5s steps(1) 4;
+
+        span{
+            font-family: variables.$fontLight;
+            color: variables.$color2;
+            text-shadow: 0px 0px 10px #8093FF;
+            transform: scale(50) !important;
+            animation: blinkingCursor 0.8s infinite;
+        }
+
+        @include mobile{
+            font-size: 40px;
+            text-align: center;
+        }
+    }
+
+    h2{
+        font-size: 56px;
+        font-family: variables.$fontBold;
+        color: variables.$color5;
+        text-shadow: 0px 0px 8px rgba(128, 147, 255, 0.25);
+        filter: blur(0.5px);
+
+        span{
+            font-size: 40px;
+            color: variables.$color2;
+            text-shadow: 0px 0px 10px #8093FF;
+            font-family: variables.$fontLight;
+
+            @include mobile{
+                text-shadow: 0px 0px 4px rgba(128, 147, 255, 0.75);
+                font-size: 20px;
+            }
+        }
+
+        @include mobile{
+            text-shadow: 0px 0px 4px rgba(128, 147, 255, 0.15);
+            font-size: 20px;
+            filter: blur(0.25px);
+        }
+    }
+
+    h3{
+        font-size: 40px;
+        font-family: variables.$fontLight;
+        color: variables.$color5;
+
+        span{
+            color: variables.$color2;
+            text-shadow: 0px 0px 10px #8093FF !important;
+        }
+
+        @include mobile{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+
+    &.One{
+        position: relative;
+        height: calc(100vh - 80px);
+        display: flex;
+
+        @include mobile{
+            flex-direction: column-reverse;
+            margin-top: 20px;
+        }
+        
+        div:first-of-type{
+            position: relative;
+            height: 100%;
+            width: 50%;
+            position: relative;  
+
+            h1{
+                margin-top: 50vh;
+            }
+
+            @include mobile{
+                height: 30%;
+                width: 100%;
+
+                h1{
+                    margin-top: 0px;
+                }
+            }
+        }
+
+        div:last-of-type{
+            height: 100%;
+            width: 50%;
+            .image{
+                margin-top: 56px;
+                height: 80%;
+                width: 100%;
+                background-color: variables.$color2;
+            }
+
+            @include mobile{
+                height: 70%;
+                width: 100%;
+            }
+        }
+    }
+
+    &.Two,&.Three{
+        position: relative;
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        padding-top: 80px;
+
+        @include mobile{
+            padding-top: 60px;
+        }
+
+        h2{
+            margin-bottom: 40px;
+
+            view-timeline-name: --titleh2;
+            view-timeline-axis: block;
+
+            animation-timeline: --titleh2;
+            animation-name: fadeParagraph;
+
+            animation-range: entry 0% cover 50%;
+            animation-fill-mode: both;
+
+            @include mobile{
+                margin-bottom: 13px;
+            }
+        }
+
+        .Content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            @include mobile{
+                flex-direction: column-reverse;
+            }
+
+            .ColumnLeft{
+                width: 45%;
+                height: 100%;
+
+                @include mobile{
+                    width: 100%;
+                    height: calc(50% - 13px);
+                }
+
+                p{
+                    font-size: 24px;
+                    font-family: variables.$fontRegular;
+                    color: rgba(variables.$color5,0.8);
+
+                    view-timeline-name: --paragraph;
+                    view-timeline-axis: block;
+
+                    animation-timeline: --paragraph;
+                    animation-name: fadeParagraph;
+
+                    animation-range: entry 0% cover 60%;
+                    animation-fill-mode: both;
+
+                    @include mobile{
+                        font-size: 14px;
+                    }
+                }
+
+                .Button{
+                    margin-top: 20%;
+                }
+            }
+
+            .ColumnRight{
+                width: 590px;
+                height: 473px;
+                max-width: 590px;
+                max-height: 500px;
+                margin-left: auto;
+                background-color: variables.$color2;
+
+                @include mobile{
+                    width: 100%;
+                    height: calc(50% - 20px);
+                    margin-bottom: 20px;
+                }
+            }
+
+            .FormContainer{
+                width: 50%;
+                margin-right: auto;
+            }
+
+            .contact{
+                width: 48%;
+                max-height: 624px;
+                padding: 64px 32px;
+
+                background: variables.$color_white;
+                box-shadow: 0px 8px 14px 0px rgba(128, 147, 255, 0.25);
+
+                @include mobile{
+                    width: 100%;
+                    height: 360px;
+                    padding: 32px 16px;
+
+                }
+
+                .item{
+                    height: 88px;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 80px;
+                    font-size: 24px;
+                    font-family: variables.$fontBold;
+                    color: variables.$color5;
+                    gap: 24px;
+
+                    @include mobile{
+                        height: 40px;
+                        font-size: 16px;
+                    }
+
+                    .icon{
+                        width: 96px;
+                        height: 88px;
+                        
+
+                        @include mobile{
+                            width: 50px;
+                            height: 40px;
+                        }
+
+                        &.icon-email{
+                            animation: floatingElement 2.5s infinite;
+                        }
+                        
+                        &.icon-linkedin{
+                            animation: floatingElement 2.5s infinite 1.5s;
+                        }
+                        
+                        &.icon-github{
+                            animation: floatingElement 2.5s infinite 1.8s;
+                        }
+                    }
+
+                    p{
+                        width: calc(100% - 96px);
+
+                        @include mobile{
+                            width: calc(100% - 50px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.Three{
+        height:  max-content !important;
+    }
+}

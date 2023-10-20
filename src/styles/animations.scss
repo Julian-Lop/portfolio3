@@ -28,3 +28,86 @@
         filter: blur(0px);
     }
 }
+
+@keyframes hideFromRight {
+    0%{
+        right: 0px;
+        filter: blur(0px);
+    }
+
+    100%{
+        right: -800px;
+        filter: blur(10px);
+    }
+}
+
+@keyframes fadeParagraph {
+    0% {
+        opacity: 0;
+        transform: translate(0,-150px);
+    }
+
+    50%{
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0,0px);
+    }
+}
+
+@keyframes fadeCard {
+    0%{
+        opacity: 0;
+        transform: translate(0,100px);
+        scale: 20%;
+    }
+
+    70%{
+        transform: translate(0,80px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0,0px);
+        scale: 100%;
+    }
+}
+
+@keyframes floatingElement {
+    0%{
+        transform: translate(0,0px);
+    }
+
+    50%{
+        transform: translate(0,-5px);
+        filter: drop-shadow(0 15px 10px rgba(variables.$color2,0.25));
+    }
+
+    100%{
+        transform: translate(0,0px);
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkingCursor {
+    50%{
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-right: 6px solid variables.$color2;
+    }
+}

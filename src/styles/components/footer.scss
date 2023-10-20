@@ -1,0 +1,20 @@
+.Footer{
+    width: 100%;
+    height: 80px;
+    border-top: 2px solid rgba(128, 147, 255, 0.25);
+    border-bottom: 2px solid rgba(128, 147, 255, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: variables.$color_white;
+
+    color: rgba(variables.$color5, 0.80);
+    font-family: variables.$fontRegular;
+    font-size: 20px;
+
+    @include mobile{
+        height: 60px;
+        flex-direction: column;
+        font-size: 14px;
+    }
+}
