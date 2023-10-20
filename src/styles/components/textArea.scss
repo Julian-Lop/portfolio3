@@ -4,6 +4,15 @@
     height: 140px;
     margin-bottom: 72px;
 
+    view-timeline-name: --textarea;
+    view-timeline-axis: block;
+
+    animation-timeline: --textarea;
+    animation-name: fadeFromLeft;
+
+    animation-range: entry 0% cover 30%;
+    animation-fill-mode: both;
+
     @include mobile{
         height: 100px;
         margin-bottom: 42px;

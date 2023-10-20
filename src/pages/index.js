@@ -9,12 +9,12 @@ import Layout from "@/components/layouts/Layout";
 
 export default function Home() {
 
-  const [animte, setAnimte] = useState(false)
+  const [animate, setAnimate] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
-      setAnimte(true)
-    }, 2300);
+      setAnimate(true)
+    }, 2000);
   },[])
 
   return (
@@ -22,7 +22,7 @@ export default function Home() {
       <Layout>
         <Section classes={'One'}>
           <div>
-            <h1>Julian A. Lopez {animte ? <span>|</span> : null}</h1>
+            <h1>Julian A. Lopez {animate ? <span>|</span> : '|'}</h1>
             <h3>Desarrollador Web <span>{'</>'}</span></h3>
           </div>
           <div>
@@ -60,7 +60,7 @@ export default function Home() {
             
           </div>
         </Section>
-        <Section classes={'Three'} id={'Contact'} >
+        <Section classes={'Three noreverse'} id={'Contact'} >
           <h2 style={{textAlign: 'right'}}><span>{'<?>'}</span> Contáctame</h2>
           <div className="Content">
             <div className="FormContainer">
