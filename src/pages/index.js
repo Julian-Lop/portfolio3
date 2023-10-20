@@ -1,15 +1,28 @@
+import { useEffect, useState } from "react";
+
 import Cards from "@/components/Cards";
+import Form from "@/components/Form";
 import Section from "@/components/Section";
 import Button from "@/components/buttons/Button";
 import Layout from "@/components/layouts/Layout";
 
+
 export default function Home() {
+
+  const [animte, setAnimte] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimte(true)
+    }, 2300);
+  },[])
+
   return (
     <>
       <Layout>
         <Section classes={'One'}>
           <div>
-            <h1>Julian A. Lopez <span>|</span></h1>
+            <h1>Julian A. Lopez {animte ? <span>|</span> : null}</h1>
             <h3>Desarrollador Web <span>{'</>'}</span></h3>
           </div>
           <div>
@@ -28,7 +41,7 @@ export default function Home() {
                 lacinia eget vitae nibh. Sed malesuada.
               </p>
 
-              <Button/>
+              <Button text={'Descargar CV'}/>
             </div>
             
             <div className="ColumnRight">
@@ -51,9 +64,7 @@ export default function Home() {
           <h2 style={{textAlign: 'right'}}><span>{'<?>'}</span> Contáctame</h2>
           <div className="Content">
             <div className="FormContainer">
-              <form>
-
-              </form>
+              <Form/>
             </div>
             <div className="contact">
               <div className="item">

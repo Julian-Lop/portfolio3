@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function TextArea() {
+export default function TextArea({id,text}) {
   return (
-    <textarea name="" id="" cols="30" rows="10">
-          
-    </textarea>
+    <div class="TextAreaContainer">
+      <textarea name={id} id={id} className="textArea" placeholder='a'/>
+      <label for={id} className="label">{text}</label>
+    </div>
   )
 }

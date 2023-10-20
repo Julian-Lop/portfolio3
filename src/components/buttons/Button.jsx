@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Button() {
+export default function Button({text}) {
   return (
     <button className='Button'>
-      Descargar CV
+    {text}
     </button>
   )
 }

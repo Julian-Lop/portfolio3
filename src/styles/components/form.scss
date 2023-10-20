@@ -1,0 +1,9 @@
+.Form{
+    width: 80%;
+    height: max-content;
+    padding: 64px 0px;
+
+    @include mobile{
+        width: 100%;
+    }
+}

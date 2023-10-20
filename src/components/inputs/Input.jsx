@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Input() {
+export default function Input({id,text,type}) {
   return (
-    <div>
-          
+    <div class="InputContainer">
+      <input type={type} name={id} id={id} className="input" placeholder="a"/>
+      <label for={id} className="label">{text}</label>
     </div>
   )
 }

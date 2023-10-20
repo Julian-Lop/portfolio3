@@ -209,6 +209,10 @@
             .FormContainer{
                 width: 50%;
                 margin-right: auto;
+
+                @include mobile{
+                    width: 100%;
+                }
             }
 
             .contact{
@@ -233,7 +237,7 @@
                     margin-bottom: 80px;
                     font-size: 24px;
                     font-family: variables.$fontBold;
-                    color: variables.$color5;
+                    color: rgba(variables.$color5,0.8);
                     gap: 24px;
 
                     @include mobile{
