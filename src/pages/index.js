@@ -63,7 +63,7 @@ export default function Home() {
         </Section>
         <Section classes={'Three noreverse'} id={'Projects'} >
           <h2>Proyectos <span>{'</>'}</span></h2>
-          <div className="Content">
+          <div className="Content projects">
             {/* Contenedor de imagenes */}
             <div className="Accordion_img">
               <Image src={imagen1} alt=""  className="Accord_img active" />
