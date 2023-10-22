@@ -123,3 +123,27 @@
         filter: brightness(1);
     }
 }
+
+@keyframes parallax {
+    0%{
+        opacity: 0;
+        display: none;
+        transform: translate(200px);
+    }
+
+    50%{
+        display: block;
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    60%{
+        opacity: 1;
+        transform: translate(0);
+    }
+
+    100%{
+        opacity: 0;
+        transform: translate(-200px);
+    }
+}

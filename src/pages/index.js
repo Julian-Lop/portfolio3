@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
+
 
 //Components
 import Cards from "@/components/Cards";
@@ -7,11 +7,7 @@ import Form from "@/components/Form";
 import Section from "@/components/Section";
 import Button from "@/components/buttons/Button";
 import Layout from "@/components/layouts/Layout";
-
-//Images
-import imagen1 from '../../public/images/Atardecer.jpg'
-import imagen2 from '../../public/images/Bosque.png'
-import imagen3 from '../../public/images/Samurai.jpg'
+import ProjectGallery from "@/components/ProjectGallery";
 
 
 export default function Home() {
@@ -64,73 +60,7 @@ export default function Home() {
         <Section classes={'Three noreverse'} id={'Projects'} >
           <h2>Proyectos <span>{'</>'}</span></h2>
           <div className="Content projects">
-            {/* Contenedor de imagenes */}
-            <div className="Accordion_img">
-              <Image src={imagen1} alt=""  className="Accord_img active" />
-              <Image src={imagen2} alt=""  className="Accord_img" />
-              <Image src={imagen3} alt=""  className="Accord_img" />
-            </div>
-            
-            {/* Acordeon */}
-            <div className="Accordion">
-
-              {/* Lista de acordeon */}
-              <ul className="Accordion_list">
-
-                {/* Item1 */}
-                <li className="Accordion_item active">
-                  <h3 className="Accordion_header">
-                    <span className="Accordion_bl">
-                      <span className="Accordion_bl_line"></span>
-                      <span className="Accordion_bl_line"></span>
-                    </span>
-                    <span className="Accordion_title">Pagina Web Emilan</span>
-                  </h3>
-                  <div className="Accordion_body">
-                    <p className="Accordion_descript">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque,
-                      metus malesuada.
-                    </p>
-                  </div>
-                </li>
-
-                {/* Item2 */}
-                <li className="Accordion_item">
-                  <h3 className="Accordion_header">
-                    <span className="Accordion_bl">
-                      <span className="Accordion_bl_line"></span>
-                      <span className="Accordion_bl_line"></span>
-                    </span>
-                    <span className="Accordion_title">Pagina Web 2</span>
-                  </h3>
-                  <div className="Accordion_body">
-                    <p className="Accordion_descript">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque,
-                      metus malesuada.
-                    </p>
-                  </div>
-                </li>
-
-                {/* Item3 */}
-                <li className="Accordion_item">
-                  <h3 className="Accordion_header">
-                    <span className="Accordion_bl">
-                      <span className="Accordion_bl_line"></span>
-                      <span className="Accordion_bl_line"></span>
-                    </span>
-                    <span className="Accordion_title">Pagina Web 3</span>
-                  </h3>
-                  <div className="Accordion_body">
-                    <p className="Accordion_descript">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque,
-                      metus malesuada.
-                    </p>
-                  </div>
-                </li>
-
-              </ul>      
-            </div>
-
+            <ProjectGallery/>
           </div>
 
         </Section>

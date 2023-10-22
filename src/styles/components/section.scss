@@ -80,10 +80,12 @@
         position: relative;
         height: calc(100vh - 80px);
         display: flex;
+        margin-bottom: 100px;
 
         @include mobile{
             flex-direction: column-reverse;
             margin-top: 20px;
+            margin-bottom: 0px;
         }
         
         div:first-of-type{
@@ -129,9 +131,11 @@
         display: flex;
         flex-direction: column;
         padding-top: 80px;
+        margin-bottom: 200px;
 
         @include mobile{
             padding-top: 60px;
+            margin-bottom: 80px;
         }
 
         h2{
@@ -293,14 +297,8 @@
             }
         }
     }
-
     &.Three{
         height:  max-content !important;
-        margin-bottom: 250px;
-
-        @include mobile{
-            margin-bottom: 80px;
-        }
         
         .Content{
             &.projects{
@@ -330,6 +328,7 @@
                             list-style: none;
                             border-bottom: 2px solid #151515;
                             user-select: none;
+                            transition: all 0.5s;
 
                             @include mobile{
                                 padding-bottom: 15px;
@@ -343,13 +342,13 @@
                                 }
                             }
     
-                            &:first-child{
-                                pointer-events: none;
+                            // &:first-child{
+                            //     pointer-events: none;
     
-                                .Accordion_body{
-                                    display: block;
-                                }
-                            }
+                            //     .Accordion_body{
+                            //         display: block;
+                            //     }
+                            // }
     
                             .Accordion_header{
                                 position: relative;
@@ -450,6 +449,10 @@
                                         transform: translate(-50%, -50%) rotate(0);
                                     }
                                 }
+
+                                .Accordion_body{
+                                    display: block;
+                                }
                             }
                         }
                     }
@@ -461,11 +464,21 @@
                     height: 78.5%;
                     top: 215px;
                     left: 0;
-                    background: #151515;
+                    background: variables.$color5;
                     overflow: hidden;
+
+                    view-timeline-name: --gallery;
+                    view-timeline-axis: block;
+
+                    animation-timeline: --gallery;
+                    animation-name: parallax;
+
+                    animation-range: entry 0% cover 120%;
+                    animation-fill-mode: both;
     
                     @include mobile{
                         position: relative;
+                        max-width: 100%;
                         width: 100%;
                         height: 300px;
                         top: 20px;
