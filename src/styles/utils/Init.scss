@@ -12,6 +12,10 @@ body{
     background: variables.$color_white;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Lato-Regular';
     src: url('../../fonts/Lato-Regular.ttf');

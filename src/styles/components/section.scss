@@ -1,5 +1,7 @@
 .Section{
-    margin-bottom: 80px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    scroll-behavior: smooth;
 
     @include mobile{
         margin-bottom: 40px;
@@ -37,7 +39,7 @@
         font-family: variables.$fontBold;
         color: variables.$color5;
         text-shadow: 0px 0px 8px rgba(128, 147, 255, 0.25);
-        filter: blur(0.5px);
+        filter: blur(0.45px);
 
         span{
             font-size: 40px;
@@ -53,7 +55,7 @@
 
         @include mobile{
             text-shadow: 0px 0px 4px rgba(128, 147, 255, 0.15);
-            font-size: 20px;
+            font-size: 24px;
             filter: blur(0.25px);
         }
     }
@@ -247,7 +249,7 @@
                     display: flex;
                     align-items: center;
                     margin-bottom: 80px;
-                    font-size: 24px;
+                    font-size: 22px;
                     font-family: variables.$fontBold;
                     color: rgba(variables.$color5,0.8);
                     gap: 24px;
@@ -294,5 +296,151 @@
 
     &.Three{
         height:  max-content !important;
+        margin-bottom: 250px;
+
+        @include mobile{
+            margin-bottom: 100px;
+        }
+        
+        .Content{
+            .Accordion{
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                margin: 160px 0;
+
+                @include mobile{
+                    display: none;
+                }
+
+                .Accordion_list{
+                    position: relative;
+                    z-index: 2;
+
+                    .Accordion_item{
+                        position: relative;
+                        padding-bottom: 30px;
+                        list-style: none;
+                        border-bottom: 2px solid #151515;
+                        user-select: none;
+                        
+                        &+.Accordion_item{
+                            margin-top: 30px;
+                        }
+
+                        &:first-child{
+                            pointer-events: none;
+
+                            .Accordion_body{
+                                display: block;
+                            }
+                        }
+
+                        .Accordion_header{
+                            position: relative;
+                            padding-right: 110px;
+
+                            .Accordion_bl{
+                                position: absolute;
+                                width: 26px;
+                                height: 26px;
+                                top: 50%;
+                                right: 0;
+                                border: 2px solid variables.$color2;
+                                pointer-events: none;
+                                transform: translateY(-50%) rotate(45deg);
+                                transition: .4s;
+                                filter: drop-shadow(0 0 8px rgba(variables.$color2,0.25));
+
+                                &::before, &::after{
+                                    position: absolute;
+                                    content: '';
+                                    width: 13.33px;
+                                    height: 1.5px;
+                                    top: 50%;
+                                    left: 50%;
+                                    background: variables.$color5;
+                                    transform: translate(-50%, -50%);
+                                    will-change: transform;
+                                    transition: .4s;
+                                }
+
+                                &::after{
+                                    transform: translate(-50%, -50%) rotate(90deg);
+                                }
+                            }
+
+                            .Accordion_title{
+                                color: variables.$color5;
+                                font-family: variables.$fontBold;
+                                font-size: 32px;
+                                text-shadow: 0 0px 8px rgba(variables.$color2, 0.25) !important;
+                                filter: blur(0.45px);
+                            }
+                        }
+
+                        .Accordion_body{
+                            display: none;
+                            padding-top: 15px;
+
+                            .Accordion_descript{
+                                max-width: 520px;
+                                width: 100%;
+                                font-size: 20px;
+                                font-family: variables.$fontRegular;
+                                color: rgba(variables.$color5,0.8);
+                                line-height: 150%;
+                            }
+                        }
+
+                        &.active{
+                            .Accordion_bl{
+                                &::after, &::before{
+                                    background: variables.$color5;
+                                }
+
+                                &::after{
+                                    opacity: 0;
+                                    transform: translate(-50%, -50%) rotate(0);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .Accordion_img{
+                position: absolute;
+                width: 50%;
+                height: 78.5%;
+                top: 215px;
+                left: 0;
+                background: #151515;
+                overflow: hidden;
+
+                @include mobile{
+                    display: none;
+                }
+
+                .Accord_img{
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    user-select: none;
+                    object-fit: cover;
+                    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+                    transform: scale(1.3);
+                    will-change: transform;
+                    transition: .8s cubic-bezier(.9,0,.1,1);
+
+                    &.active{
+                        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                        transform: scale(1);
+                        transition-delay: .5s;
+                    }
+                }
+            }   
+        }
     }
 }
