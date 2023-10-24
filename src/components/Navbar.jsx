@@ -5,7 +5,7 @@ import React, { useState } from 'react'
  */
 import Menu from './Menu'
 
-export default function Navbar() {
+export default function Navbar({currentSection, setCurrent}) {
 
   /**
    * Rotar icon menu y ocultar navbar
@@ -31,7 +31,7 @@ export default function Navbar() {
         className={rotate ? 'icon icon-menu rotate' : 'icon icon-menu'}
         onClick={() => toggleMenu()}
       />
-      <Menu classes={menu} setRotate={toggleMenu}/>
+      <Menu classes={menu} setRotate={toggleMenu} navigate={{currentSection}}/>
     </nav>
   )
 }

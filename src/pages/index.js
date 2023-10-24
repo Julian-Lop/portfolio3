@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useRef } from "react";
 
 //Components
 import Cards from "@/components/Cards";
@@ -14,6 +13,8 @@ export default function Home() {
 
   const [animate, setAnimate] = useState(false)
 
+  const [currentSection, setCurrentSection] = useState('Home')
+
   useEffect(() => {
     setTimeout(() => {
       setAnimate(true)
@@ -22,8 +23,8 @@ export default function Home() {
 
   return (
     <>
-      <Layout>
-        <Section classes={'One'}>
+      <Layout currentSection={currentSection} setCurrentSection={setCurrentSection}>
+        <Section classes={'One'} id={'Home'} setCurrentSection={setCurrentSection}>
           <div>
             <h1>Julian A. Lopez {animate ? <span>|</span> : '|'}</h1>
             <h3>Desarrollador Web <span>{'</>'}</span></h3>
@@ -32,7 +33,7 @@ export default function Home() {
             <div className="image"/>
           </div>
         </Section>
-        <Section classes={'Two'} id={'Aboutme'} >
+        <Section classes={'Two'} id={'Aboutme'} setCurrentSection={setCurrentSection}>
           <h2>Acerca de mí <span>{'{...}'}</span></h2>
           <div className="Content">
             <div className="ColumnLeft">
@@ -51,20 +52,20 @@ export default function Home() {
             </div>
           </div>
         </Section>
-        <Section classes={'Three'} id={'Skills'} >
+        <Section classes={'Three'} id={'Skills'} setCurrentSection={setCurrentSection}>
           <h2 style={{textAlign: 'right'}} ><span>{'{...}'}</span> Tecnologías y Habilidades</h2>
           <div className="Content">
             <Cards/>
           </div>
         </Section>
-        <Section classes={'Three noreverse'} id={'Projects'} >
+        <Section classes={'Three noreverse'} id={'Projects'} setCurrentSection={setCurrentSection}>
           <h2>Proyectos <span>{'</>'}</span></h2>
           <div className="Content projects">
             <ProjectGallery/>
           </div>
 
         </Section>
-        <Section classes={'Three noreverse'} id={'Contact'} >
+        <Section classes={'Three noreverse'} id={'Contact'} setCurrentSection={setCurrentSection}>
           <h2 style={{textAlign: 'right'}}><span>{'<?>'}</span> Contáctame</h2>
           <div className="Content">
             <div className="FormContainer">

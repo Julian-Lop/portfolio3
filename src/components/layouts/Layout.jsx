@@ -8,7 +8,7 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 
 
-export default function Layout({children,title}) {
+export default function Layout({ children, title, currentSection, setCurrentSection }) {
   return (
     <>
       <Head>
@@ -16,7 +16,7 @@ export default function Layout({children,title}) {
         <meta name="description" content="Portafolio desarrolador web" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar/>
+      <Navbar setCurrent={setCurrentSection} currentSection={currentSection} />
       <main className='Layout' >
         {children}
       </main>

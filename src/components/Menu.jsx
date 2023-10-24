@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export default function Menu({ setRotate, classes = ''}) {
+export default function Menu({ setRotate, classes = '', navigate}) {
 
   const [ready, setReady] = useState(false)
 
@@ -12,20 +12,20 @@ export default function Menu({ setRotate, classes = ''}) {
 
   return (
     <ul className={'Menu '+classes}>
-      <li className={window.location.href.includes('Aboutme') ? 'active' : null}>
-        <a href="#Aboutme" onClick={() => setRotate()}>
+      <li className={navigate.currentSection == 'Aboutme' ? 'active' : null}>
+        <a href="#Aboutme" onClick={() => { setRotate(); }}>
         <i className='icon icon-user' /> Acerca de mí</a>
       </li>
-      <li className={window.location.href.includes('Skills') ? 'active' : null}>
-        <a href="#Skills" onClick={() => setRotate()}>
+      <li className={navigate.currentSection == 'Skills' ? 'active' : null}>
+        <a href="#Skills" onClick={() => { setRotate(); }}>
         <i className='icon icon-skills' /> Habilidades</a>
       </li>
-      <li className={window.location.href.includes('Projects') ? 'active' : null}>
-        <a href="#Projects" onClick={() => setRotate()}>
+      <li className={navigate.currentSection == 'Projects' ? 'active' : null}>
+        <a href="#Projects" onClick={() => { setRotate(); }}>
         <i className='icon icon-idea' /> Proyectos</a>
       </li>
-      <li className={window.location.href.includes('Contact') ? 'active' : null}>
-        <a href="#Contact" onClick={() => setRotate()}>
+      <li className={navigate.currentSection == 'Contact' ? 'active' : null}>
+        <a href="#Contact" onClick={() => { setRotate(); }}>
         <i className='icon icon-send' /> Contáctame</a>
       </li>
     </ul>
