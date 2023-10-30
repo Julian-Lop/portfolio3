@@ -110,3 +110,13 @@
     background-color: transparent;
     background-image: url('../../../public/svg/IconGithub.svg');
 }
+
+.icon-download1{
+    -webkit-mask-image: url('../../../public/svg/IconFileDownload.svg');
+    mask-image: url('../../../public/svg/IconFileDownload.svg')
+}
+
+.icon-check{
+    -webkit-mask-image: url('../../../public/svg/IconCheck.svg');
+    mask-image: url('../../../public/svg/IconCheck.svg')
+}

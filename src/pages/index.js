@@ -45,7 +45,7 @@ export default function Home() {
                 lacinia eget vitae nibh. Sed malesuada.
               </p>
 
-              <Button text={'Descargar CV'}/>
+              <Button text={'Descargar CV'} icon={'icon-download1'} download={true} />
             </div>
             
             <div className="ColumnRight">
