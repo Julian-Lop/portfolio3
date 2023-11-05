@@ -18,11 +18,11 @@ export default function Menu({ setRotate, classes = '', navigate}) {
       </li>
       <li className={navigate.currentSection == 'Skills' ? 'active' : null}>
         <a href="#Skills" onClick={() => { setRotate(); }}>
-        <i className='icon icon-skills' /> Habilidades</a>
+        <i className='icon icon-idea' /> Habilidades</a>
       </li>
       <li className={navigate.currentSection == 'Projects' ? 'active' : null}>
         <a href="#Projects" onClick={() => { setRotate(); }}>
-        <i className='icon icon-idea' /> Proyectos</a>
+        <i className='icon icon-skills' /> Proyectos</a>
       </li>
       <li className={navigate.currentSection == 'Contact' ? 'active' : null}>
         <a href="#Contact" onClick={() => { setRotate(); }}>

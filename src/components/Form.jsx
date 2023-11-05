@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+
+import { useForm } from 'react-hook-form'
+
 import Input from './inputs/Input'
 import TextArea from './inputs/TextArea'
 import Button from './buttons/Button'
-
-import { useForm } from 'react-hook-form'
 import Popup from './Popup'
 
 export default function Form() {
@@ -18,10 +19,19 @@ export default function Form() {
     formState: { errors }
   } = useForm()
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log({ data })
     setSent(true)
     reset()
+    let response = await fetch('api/sendEmail', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data)
+    })
+    response = await response.json()
+    console.log({response})
     setTimeout(() => {
       setSent(false)
     }, 3000);
