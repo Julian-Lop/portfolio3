@@ -32,9 +32,8 @@ export default function Form() {
     })
     response = await response.json()
     console.log({response})
-    setTimeout(() => {
-      setSent(false)
-    }, 3000);
+    
+    setSent(false)
   }
 
   return (

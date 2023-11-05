@@ -7,7 +7,7 @@ export default function EmailTemplate({name,email,message}) {
       
       <strong style={{color: '#242e66'}}>{email}</strong>
 
-      <p style={{color: '#242e66cc', fontWeight: '600px'}}>{message}</p>
+      <p style={{color: '#242e66cc', fontWeight: '600'}}>{message}</p>
     </div>
   )
 }
