@@ -38,11 +38,12 @@ export default function Home() {
           <div className="Content">
             <div className="ColumnLeft">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque,
-                metus malesuada fermentum tristique, ante turpis interdum leo, vitae tempor
-                tellus dui et sapien. In nec leo vitae nulla euismod blandit sed in erat.
-                Donec sed venenatis nisi. Phasellus eu orci nec quam condimentum
-                lacinia eget vitae nibh. Sed malesuada.
+                Desarrollor, diseño e implemento soluciones de software enfocadas en tecnologías
+                web. Cuento con experiencia como desarrollador Frontend, haciendo maquetación fiel
+                al diseño, implementado lógica y buenas prácticas de programación para asegurar
+                escalabilidad, fiabilidad y eficiencia del producto. He propuesto e implementado, 
+                tanto tecnologías, como patrones de diseño y arquitectura de software para mejorar la
+                eficiencia, fiabilidad y procesos de creación.
               </p>
 
               <Button text={'Descargar CV'} icon={'icon-download1'} download={true} />
