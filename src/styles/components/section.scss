@@ -60,7 +60,7 @@
 
         @include mobile{
             text-shadow: 0px 0px 4px rgba(128, 147, 255, 0.15);
-            font-size: 24px;
+            font-size: 30px;
             filter: blur(0.25px);
         }
 
@@ -245,7 +245,8 @@
                     animation-fill-mode: both;
 
                     @include mobile{
-                        font-size: 14px;
+                        font-size: 16px;
+                        animation-range: entry 0% cover 45%;
                     }
 
                     @include tablet{
@@ -604,6 +605,7 @@
                         width: 100%;
                         height: 300px;
                         top: 20px;
+                        background: rgba(variables.$color5,0);
                     }
 
                     @include tablet{
@@ -629,12 +631,12 @@
     
                         &.active{
                             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-                            transform: scale(1);
-                            transition-delay: .5s;
+                            transform: scale(1.009);
+                            transition-delay: .4s;
 
-                            // &:hover{
-                            //     object-fit: contain;   
-                            // }
+                            @include mobile{
+                                object-fit: contain;
+                            }
                         }
                     }
                 }   
