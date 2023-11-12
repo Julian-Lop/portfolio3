@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import Image from "next/image";
 
 //Images
-import imagen1 from '../../public/images/Atardecer.jpg'
-import imagen2 from '../../public/images/Bosque.png'
+import imagen1 from '../../public/images/WebEmilanMejorado.png'
+import imagen2 from '../../public/images/SirimiriStoreMejorado.png'
 import imagen3 from '../../public/images/Samurai.jpg'
 
 export default function ProjectGallery() {
@@ -14,8 +14,8 @@ export default function ProjectGallery() {
     <>
       {/* Contenedor de imagenes */}
       <div className="Accordion_img">
-        <Image src={imagen1} alt="" className={project == 1 ? "Accord_img active" : "Accord_img"} />
-        <Image src={imagen2} alt="" className={project == 2 ? "Accord_img active" : "Accord_img"} />
+        <a href="https://emilan.co" target='_blank'><Image src={imagen1} alt="" className={project == 1 ? "Accord_img active" : "Accord_img"} /></a>
+        <a href="https://sirimiri.store" target='_blank'><Image src={imagen2} alt="" className={project == 2 ? "Accord_img active" : "Accord_img"} /></a>
         <Image src={imagen3} alt="" className={project == 3 ? "Accord_img active" : "Accord_img"} />
       </div>
 
@@ -35,12 +35,13 @@ export default function ProjectGallery() {
               <span className="Accordion_bl_line"></span>
               <span className="Accordion_bl_line"></span>
             </span>
-            <span className="Accordion_title">Proyecto 1</span>
+            <span className="Accordion_title">Emilan Web</span>
           </h3>
           <div className="Accordion_body">
             <p className="Accordion_descript">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque,
-              metus malesuada.
+                Página web de Emilan Insurance. Basada en Next js, utilizando SSG para optimizar la velocidad de carga,
+                conectada con servicios de las Apis de Google y usando Sass para estilizar. La maquetación se hizo basada 
+                fielmente en los diseños entregados por el cliente.
             </p>
           </div>
         </li>
@@ -55,12 +56,12 @@ export default function ProjectGallery() {
               <span className="Accordion_bl_line"></span>
               <span className="Accordion_bl_line"></span>
             </span>
-            <span className="Accordion_title">Proyecto 2</span>
+            <span className="Accordion_title">Sirimiri Store</span>
           </h3>
           <div className="Accordion_body">
             <p className="Accordion_descript">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque,
-              metus malesuada.
+                Tienda en Sirmiri. Tienda en Shopify a la cuál se le hicieron modificaciones de maquetación,
+                para adaptar los colores y ciertos componentes a los requerimientos del cliente.
             </p>
           </div>
         </li>
