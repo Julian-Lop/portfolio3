@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 //Components
 import Cards from "@/components/Cards";
@@ -7,6 +8,9 @@ import Section from "@/components/Section";
 import Button from "@/components/buttons/Button";
 import Layout from "@/components/layouts/Layout";
 import ProjectGallery from "@/components/ProjectGallery";
+
+//Images
+import AboutImage from '../../public/images/AboutImage.jpg'
 
 
 export default function Home() {
@@ -38,8 +42,10 @@ export default function Home() {
           <div className="Content">
             <div className="ColumnLeft">
               <p>
-                Desarrollor, diseño e implemento soluciones de software enfocadas en tecnologías
-                web. Cuento con experiencia como desarrollador Frontend, haciendo maquetación fiel
+                Desarrollo, diseño e implemento soluciones de software enfocadas en tecnologías
+                web.
+                <br/>
+                Cuento con experiencia como desarrollador Frontend, haciendo maquetación fiel
                 al diseño, implementado lógica y buenas prácticas de programación para asegurar
                 escalabilidad, fiabilidad y eficiencia del producto. He propuesto e implementado, 
                 tanto tecnologías, como patrones de diseño y arquitectura de software para mejorar la
@@ -50,6 +56,7 @@ export default function Home() {
             </div>
             
             <div className="ColumnRight">
+              <Image src={AboutImage} alt="About image" style={{width: '100%', height: '100%', objectFit:'cover',boxShadow:'0px 0px 10px 4px rgba(128, 147, 255, 0.25)'}} />
             </div>
           </div>
         </Section>

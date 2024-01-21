@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import Image from "next/image";
 
 //Images
-import imagen1 from '../../public/images/WebEmilanMejorado.png'
-import imagen2 from '../../public/images/SirimiriStoreMejorado.png'
-import imagen3 from '../../public/images/Samurai.jpg'
+import WebEmilan from '../../public/images/WebEmilanMejorado.png'
+import SirimiriStore from '../../public/images/SirimiriStoreMejorado.png'
+import NubiImage from '../../public/images/Nubi.png'
 
 export default function ProjectGallery() {
 
@@ -14,9 +14,9 @@ export default function ProjectGallery() {
     <>
       {/* Contenedor de imagenes */}
       <div className="Accordion_img">
-        <a href="https://emilan.co" target='_blank'><Image src={imagen1} alt="" className={project == 1 ? "Accord_img active" : "Accord_img"} /></a>
-        <a href="https://sirimiri.store" target='_blank'><Image src={imagen2} alt="" className={project == 2 ? "Accord_img active" : "Accord_img"} /></a>
-        <Image src={imagen3} alt="" className={project == 3 ? "Accord_img active" : "Accord_img"} />
+        <a href="https://emilan.co" target='_blank'><Image src={WebEmilan} alt="" className={project == 1 ? "Accord_img active" : "Accord_img"} /></a>
+        <a href="https://sirimiri.store" target='_blank'><Image src={SirimiriStore} alt="" className={project == 2 ? "Accord_img active" : "Accord_img"} /></a>
+        <Image src={NubiImage} alt="" className={project == 3 ? "Accord_img active" : "Accord_img"} />
       </div>
 
       {/* Acordeon */}
@@ -76,12 +76,12 @@ export default function ProjectGallery() {
               <span className="Accordion_bl_line"></span>
               <span className="Accordion_bl_line"></span>
             </span>
-            <span className="Accordion_title">Proyecto 3</span>
+            <span className="Accordion_title">Nubi</span>
           </h3>
           <div className="Accordion_body">
             <p className="Accordion_descript">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed scelerisque,
-              metus malesuada.
+                Intranet y crm sencillo, para manejar los tiempos de los empleados y las información de los clientes.
+                Basado en React, Redux, Sass y utilizando websockets.
             </p>
           </div>
         </li>
