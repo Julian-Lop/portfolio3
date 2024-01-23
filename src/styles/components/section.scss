@@ -161,8 +161,22 @@
                     @include mobile{
                         height: 95%;
                         width: 100%;
+                        max-width: 320px;
+                        max-height: 351.5px;
                         margin-top: -20px;
-                        margin-left: 0px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        animation:  moveProfile 2s 2s steps(9) forwards;
+                    }
+
+                    @include tablet{
+                        height: 95%;
+                        width: 100%;
+                        max-width: 420px;
+                        max-height: 451.5px;
+                        margin-top: -20px;
+                        margin-left: auto;
+                        margin-right: auto;
                         animation:  moveProfile 2s 2s steps(9) forwards;
                     }
                 }
