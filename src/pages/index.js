@@ -11,8 +11,6 @@ import ProjectGallery from "@/components/ProjectGallery";
 
 //Images
 import AboutImage from '../../public/images/AboutImage.jpg'
-import ProfileColor from '../../public/images/PerfilColor.png'
-import ProfileGrey from '../../public/images/PerfilGris.png'
 
 
 export default function Home() {
@@ -25,6 +23,7 @@ export default function Home() {
     setTimeout(() => {
       setAnimate(true)
     }, 2000);
+    
   },[])
 
   return (
@@ -37,7 +36,7 @@ export default function Home() {
           </div>
           <div>
             <div className="image">
-              <div className="color-image"/>
+              <div className={"color-image animatedProfile"} />
               {/* <Image src={ProfileGrey} alt="profile image" style={{objectFit:'cover',width:'100%', height:'100%'}} /> */}
             </div>
           </div>

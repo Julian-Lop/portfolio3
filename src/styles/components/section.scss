@@ -149,14 +149,18 @@
                 .color-image{
                     position: absolute;
                     inset: 0;
-                    background-image: url("../../../public/images/Sprites.png");
+                    background-image: url("../../../public/images/SpriteC.png");
                     background-size: cover;
                     background-position: 0% 0%;
-                    height: 110%;
-                    width: 86%;
+                    height: 100%;
+                    width: 81.5%;
                     margin-top: -56px;
                     margin-left: 0px;
-                    animation:  moveProfile 2s 2s steps(9) forwards;
+
+                    &.animatedProfile{
+                        animation:  moveProfile 2.5s 1s steps(23) forwards;
+                    }
+                    
 
                     @include mobile{
                         height: 95%;
@@ -166,7 +170,6 @@
                         margin-top: -20px;
                         margin-left: auto;
                         margin-right: auto;
-                        animation:  moveProfile 2s 2s steps(9) forwards;
                     }
 
                     @include tablet{
@@ -177,7 +180,6 @@
                         margin-top: -20px;
                         margin-left: auto;
                         margin-right: auto;
-                        animation:  moveProfile 2s 2s steps(9) forwards;
                     }
                 }
             }
