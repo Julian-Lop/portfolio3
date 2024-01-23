@@ -141,10 +141,31 @@
             height: 100%;
             width: 50%;
             .image{
+                position: relative;
                 margin-top: 56px;
                 height: 80%;
                 width: 100%;
-                background-color: variables.$color2;
+
+                .color-image{
+                    position: absolute;
+                    inset: 0;
+                    background-image: url("../../../public/images/Sprites.png");
+                    background-size: cover;
+                    background-position: 0% 0%;
+                    height: 110%;
+                    width: 86%;
+                    margin-top: -56px;
+                    margin-left: 0px;
+                    animation:  moveProfile 2s 2s steps(9) forwards;
+
+                    @include mobile{
+                        height: 95%;
+                        width: 100%;
+                        margin-top: -20px;
+                        margin-left: 0px;
+                        animation:  moveProfile 2s 2s steps(9) forwards;
+                    }
+                }
             }
 
             @include mobile{

@@ -11,6 +11,8 @@ import ProjectGallery from "@/components/ProjectGallery";
 
 //Images
 import AboutImage from '../../public/images/AboutImage.jpg'
+import ProfileColor from '../../public/images/PerfilColor.png'
+import ProfileGrey from '../../public/images/PerfilGris.png'
 
 
 export default function Home() {
@@ -34,7 +36,10 @@ export default function Home() {
             <h3>Desarrollador Web <span>{'</>'}</span></h3>
           </div>
           <div>
-            <div className="image"/>
+            <div className="image">
+              <div className="color-image"/>
+              {/* <Image src={ProfileGrey} alt="profile image" style={{objectFit:'cover',width:'100%', height:'100%'}} /> */}
+            </div>
           </div>
         </Section>
         <Section classes={'Two'} id={'Aboutme'} setCurrentSection={setCurrentSection}>
