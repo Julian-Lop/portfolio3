@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div>
             <div className="image">
-              {/* <div className={"color-image animatedProfile"} /> */}
+              <div className={"color-image animatedProfile"} />
               {/* <Image src={ProfileGrey} alt="profile image" style={{objectFit:'cover',width:'100%', height:'100%'}} /> */}
             </div>
           </div>
