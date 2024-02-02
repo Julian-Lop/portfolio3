@@ -29,6 +29,18 @@
 .icon-menu{
     background-color: transparent;
     background-image: url('../../../public/svg/IconMenu.svg');
+
+    &.rotate-infinite{
+        transition: all 0.5s;
+        width: 150px;
+        height: 150px;
+        animation: rotateInfinite 2s infinite;
+
+        @include mobile{
+            width: 100px;
+            height: 100px;
+        }
+    }
 }
 
 .icon-user{

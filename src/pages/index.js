@@ -48,7 +48,9 @@ export default function Home() {
     }
   }, [ready])
   
-  if(!ready) return (<>Cargando....</>)
+  if (!ready) return (<>
+    <i className='icon icon-menu rotate-infinite' style={{ margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, position: 'absolute' }}/>
+  </>)
 
   return (
     <>

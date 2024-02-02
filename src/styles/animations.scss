@@ -176,3 +176,13 @@
         background-position: 100% 0%;
     }
 }
+
+@keyframes rotateInfinite {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
