@@ -1,6 +1,10 @@
 import React from 'react'
 import Head from 'next/head'
 
+//Vercel Speed Insgihts
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+
 /**
  * * Components
  */
@@ -19,6 +23,7 @@ export default function Layout({ children, title, currentSection, setCurrentSect
       <Navbar setCurrent={setCurrentSection} currentSection={currentSection} />
       <main className='Layout' >
         {children}
+        <SpeedInsights />
       </main>
       <Footer/>
     </>
