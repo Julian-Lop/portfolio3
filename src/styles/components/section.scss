@@ -163,8 +163,7 @@
                     
 
                     @include mobile{
-                        // height: 95%;
-                        // width: 100%;
+                        background-image: url("../../../public/images/SpriteCmobile.png");
                         width: 320px;
                         height: 351.5px;
                         margin-top: -20px;
