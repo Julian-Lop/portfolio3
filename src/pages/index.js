@@ -15,16 +15,26 @@ import AboutImage from '../../public/images/AboutImage.jpg'
 
 export default function Home() {
 
+  // Ready page
+  const [ready, setReady] = useState(false)
+
   const [animate, setAnimate] = useState(false)
 
   const [currentSection, setCurrentSection] = useState('Home')
 
   useEffect(() => {
-    setTimeout(() => {
-      setAnimate(true)
-    }, 2000);
-    
-  },[])
+    setReady(true)
+  }, [])
+
+  useEffect(() => {
+    if (ready == true) {
+      setTimeout(() => {
+        setAnimate(true)
+      }, 2000);
+    }
+  }, [ready])
+  
+  if(!ready) return (<></>)
 
   return (
     <>
@@ -36,7 +46,7 @@ export default function Home() {
           </div>
           <div>
             <div className="image">
-              <div className={"color-image animatedProfile"} />
+              <div className={`color-image ${animate && 'animatedProfile'}`} />
               {/* <Image src={ProfileGrey} alt="profile image" style={{objectFit:'cover',width:'100%', height:'100%'}} /> */}
             </div>
           </div>
