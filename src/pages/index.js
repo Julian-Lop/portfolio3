@@ -31,7 +31,7 @@ export default function Home() {
     if (connection.downlink < 6) {
       setTimeout(() => {
         setReady(true)
-      }, 5000);
+      }, 3000);
     } else {
       setTimeout(() => {
         setReady(true)
