@@ -26,6 +26,8 @@ export default function Home() {
 
     const connection = navigator.connection;
 
+    console.log({velocidad: connection.downlink+'Mbps'})
+
     if (connection.downlink < 6) {
       setTimeout(() => {
         setReady(true)
@@ -39,7 +41,7 @@ export default function Home() {
   }, [])
 
   useEffect(() => {
-    if (ready == true) {
+    if (ready) {
       setTimeout(() => {
         setAnimate(true)
       }, 2000);
@@ -58,7 +60,7 @@ export default function Home() {
           </div>
           <div>
             <div className="image">
-              <div className={`color-image ${animate && 'animatedProfile'}`} />
+              <div className={'color-image animatedProfile'} />
               {/* <Image src={ProfileGrey} alt="profile image" style={{objectFit:'cover',width:'100%', height:'100%'}} /> */}
             </div>
           </div>
