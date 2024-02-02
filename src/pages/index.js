@@ -28,15 +28,15 @@ export default function Home() {
 
     console.log({velocidad: connection.downlink+'Mbps'})
 
-    if (connection.downlink < 6) {
-      setTimeout(() => {
-        setReady(true)
-      }, 3000);
-    } else {
+    // if (connection.downlink < 6) {
+    //   setTimeout(() => {
+    //     setReady(true)
+    //   }, 3000);
+    // } else {
       setTimeout(() => {
         setReady(true)
       }, 1000);
-    }
+    // }
     
   }, [])
 
