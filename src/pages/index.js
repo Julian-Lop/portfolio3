@@ -10,7 +10,7 @@ import Layout from "@/components/layouts/Layout";
 import ProjectGallery from "@/components/ProjectGallery";
 
 //Images
-import AboutImage from '../../public/images/AboutImage.jpg'
+import AboutImage from '../../public/images/AboutImage.png'
 
 
 export default function Home() {
@@ -23,7 +23,19 @@ export default function Home() {
   const [currentSection, setCurrentSection] = useState('Home')
 
   useEffect(() => {
-    setReady(true)
+
+    const connection = navigator.connection;
+
+    if (connection.downlink < 6) {
+      setTimeout(() => {
+        setReady(true)
+      }, 5000);
+    } else {
+      setTimeout(() => {
+        setReady(true)
+      }, 1000);
+    }
+    
   }, [])
 
   useEffect(() => {
@@ -34,7 +46,7 @@ export default function Home() {
     }
   }, [ready])
   
-  if(!ready) return (<></>)
+  if(!ready) return (<>Cargando....</>)
 
   return (
     <>
@@ -70,7 +82,12 @@ export default function Home() {
             </div>
             
             <div className="ColumnRight">
-              <Image src={AboutImage} alt="About image" style={{width: '100%', height: '100%', objectFit:'cover',boxShadow:'0px 0px 10px 4px rgba(128, 147, 255, 0.25)'}} />
+              <Image
+                src={AboutImage}
+                alt="About image"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', boxShadow: '0px 0px 10px 4px rgba(128, 147, 255, 0.25)' }}
+                loading="lazy"
+              />
             </div>
           </div>
         </Section>

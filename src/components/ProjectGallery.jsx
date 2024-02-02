@@ -14,9 +14,26 @@ export default function ProjectGallery() {
     <>
       {/* Contenedor de imagenes */}
       <div className="Accordion_img">
-        <a href="https://emilan.co" target='_blank'><Image src={WebEmilan} alt="" className={project == 1 ? "Accord_img active" : "Accord_img"} /></a>
-        <a href="https://sirimiri.store" target='_blank'><Image src={SirimiriStore} alt="" className={project == 2 ? "Accord_img active" : "Accord_img"} /></a>
-        <Image src={NubiImage} alt="" className={project == 3 ? "Accord_img active" : "Accord_img"} />
+        <a href="https://emilan.co" target='_blank'>
+          <Image
+            src={WebEmilan}
+            alt=""
+            className={project == 1 ? "Accord_img active" : "Accord_img"}
+            loading='lazy'
+          />
+        </a>
+        <a href="https://sirimiri.store" target='_blank'>
+          <Image src={SirimiriStore}
+            alt=""
+            className={project == 2 ? "Accord_img active" : "Accord_img"}
+            loading='lazy'
+          />
+        </a>
+        <Image
+          src={NubiImage}
+          alt="" className={project == 3 ? "Accord_img active" : "Accord_img"}
+          loading='lazy'
+        />
       </div>
 
       {/* Acordeon */}
