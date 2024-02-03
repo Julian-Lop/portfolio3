@@ -32,7 +32,7 @@ export default function Home() {
 
       setTimeout(() => {
         setSlowConnection(false)
-      }, 10000/connection.downlink);
+      }, 9000/connection.downlink);
     }
    
     setReady(true)
