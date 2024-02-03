@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 //Components
@@ -17,6 +17,7 @@ export default function Home() {
 
   // Ready page
   const [ready, setReady] = useState(false)
+  const [slowConnection, setSlowConnection] = useState(false)
 
   const [animate, setAnimate] = useState(false)
 
@@ -26,19 +27,20 @@ export default function Home() {
 
     const connection = navigator.connection;
 
-    console.log({velocidad: connection.downlink+'Mbps'})
+    if (connection.downlink < 6) {
+      setSlowConnection(true)
 
-    if (connection.downlink < 5) {
       setTimeout(() => {
-        setReady(true)
-      }, 1000);
-    } else {
-      setReady(true)
+        setSlowConnection(false)
+      }, 12000/connection.downlink);
     }
+   
+    setReady(true)
+    
   }, [])
 
   useEffect(() => {
-    if (ready) {
+    if (ready && !slowConnection) {
       setTimeout(() => {
         setAnimate(true)
       }, 2000);
@@ -51,15 +53,18 @@ export default function Home() {
 
   return (
     <>
+      {slowConnection && <div div style={{ width: '100%', height: '100vh', position: 'absolute', zIndex: 10000, background: 'white' }}>
+        <i className='icon icon-menu rotate-infinite' style={{ margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, position: 'absolute' }}/>
+      </div>}
       <Layout currentSection={currentSection} setCurrentSection={setCurrentSection}>
         <Section classes={'One'} id={'Home'} setCurrentSection={setCurrentSection}>
           <div>
-            <h1>Julian A. Lopez {animate ? <span>|</span> : '|'}</h1>
+            {!slowConnection && <h1>Julian A. Lopez {animate ? <span>|</span> : '|'}</h1>}
             <h3>Desarrollador Web <span>{'</>'}</span></h3>
           </div>
           <div>
             <div className="image">
-              <div className={'color-image animatedProfile'} />
+              <div className={`color-image ${!slowConnection && 'animatedProfile'}`} />
               {/* <Image src={ProfileGrey} alt="profile image" style={{objectFit:'cover',width:'100%', height:'100%'}} /> */}
             </div>
           </div>
