@@ -53,7 +53,7 @@ export default function Home() {
 
   return (
     <>
-      {slowConnection && <div div style={{ width: '100%', height: '100vh', position: 'absolute', zIndex: 10000, background: 'white' }}>
+      {slowConnection && <div div style={{ width: '100%', height: '100vh', position: 'fixed', zIndex: 10000, background: 'white' }}>
         <i className='icon icon-menu rotate-infinite' style={{ margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, position: 'absolute' }}/>
       </div>}
       <Layout currentSection={currentSection} setCurrentSection={setCurrentSection}>
