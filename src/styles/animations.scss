@@ -110,12 +110,10 @@
 @keyframes fadeFromLeft {
     0%{
         transform: translate(-100px,0);
-        filter: brightness(10);
     }
 
     100%{
         transform: translate(0,0);
-        filter: brightness(1);
     }
 }
 
