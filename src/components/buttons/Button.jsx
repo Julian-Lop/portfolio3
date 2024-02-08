@@ -5,7 +5,7 @@ export default function Button({ text, icon = null,type='button', download = fal
 
   if (download) return (
     <a
-      href="/documents/CV_Julian_Lopez_desarrollador_web.pdf"
+      href="/documents/CV_Julian_Lopez_Desarrollador_Web_Fullstack.pdf"
       download="CV_JulianLopez_Desarrollador_Web"
       onClick={() => setCheck(true)}
     >

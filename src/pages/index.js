@@ -77,8 +77,8 @@ export default function Home() {
                 Desarrollo, diseño e implemento soluciones de software enfocadas en tecnologías
                 web.
                 <br/>
-                Cuento con experiencia como desarrollador Frontend, haciendo maquetación fiel
-                al diseño, implementado lógica y buenas prácticas de programación para asegurar
+                Cuento con experiencia como desarrollador web, haciendo maquetación fiel
+                al diseño, implementando lógica y buenas prácticas de programación para asegurar
                 escalabilidad, fiabilidad y eficiencia del producto. He propuesto e implementado, 
                 tanto tecnologías, como patrones de diseño y arquitectura de software para mejorar la
                 eficiencia, fiabilidad y procesos de creación.
