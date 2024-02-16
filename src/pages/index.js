@@ -9,9 +9,6 @@ import Button from "@/components/buttons/Button";
 import Layout from "@/components/layouts/Layout";
 import ProjectGallery from "@/components/ProjectGallery";
 
-//Images
-import AboutImage from '../../public/images/AboutImage.png'
-
 
 export default function Home() {
 
@@ -32,7 +29,7 @@ export default function Home() {
 
       setTimeout(() => {
         setSlowConnection(false)
-      }, 9000/connection.downlink);
+      }, 8000/connection.downlink);
     }
    
     setReady(true)
@@ -89,7 +86,9 @@ export default function Home() {
             
             <div className="ColumnRight">
               <Image
-                src={AboutImage}
+                src="https://drive.google.com/uc?export=view&id=1_umyps4rTgYhG9U926LB6ikSP-TtSg-a"
+                width={800}
+                height={1360}
                 alt="About image"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', boxShadow: '0px 0px 10px 4px rgba(128, 147, 255, 0.25)' }}
                 loading="lazy"

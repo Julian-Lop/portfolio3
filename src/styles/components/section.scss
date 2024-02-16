@@ -149,7 +149,7 @@
                 .color-image{
                     position: absolute;
                     inset: 0;
-                    background-image: url("../../../public/images/SpriteC.png");
+                    background-image: url("../../../public/images/Sprite.webp");
                     background-size: cover;
                     background-position: 0% 0%;
                     height: 600px;
@@ -163,7 +163,6 @@
                     
 
                     @include mobile{
-                        background-image: url("../../../public/images/SpriteCmobile.png");
                         width: 320px;
                         height: 351.5px;
                         margin-top: -20px;

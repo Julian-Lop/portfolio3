@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import Image from "next/image";
 
-//Images
-import WebEmilan from '../../public/images/WebEmilanMejorado.png'
-import SirimiriStore from '../../public/images/SirimiriStoreMejorado.png'
-import NubiImage from '../../public/images/Nubi.png'
 
 export default function ProjectGallery() {
 
@@ -16,22 +12,29 @@ export default function ProjectGallery() {
       <div className="Accordion_img">
         <a href="https://emilan.co" target='_blank'>
           <Image
-            src={WebEmilan}
-            alt=""
+            src={"https://drive.google.com/uc?export=view&id=1XcwppJCvcuGj97dH-0fa2AB75gF2KoVN"}
+            width={900}
+            height={1000}
+            alt="imágen de proyecto Emilan Web"
             className={project == 1 ? "Accord_img active" : "Accord_img"}
             loading='lazy'
           />
         </a>
         <a href="https://sirimiri.store" target='_blank'>
-          <Image src={SirimiriStore}
-            alt=""
+          <Image src={"https://drive.google.com/uc?export=view&id=1EWGsxzqPzuipbRSL7ZWZBVYBxxDeIPEf"}
+            width={900}
+            height={1000}
+            alt="Imágen de proyecto SirimiriStore"
             className={project == 2 ? "Accord_img active" : "Accord_img"}
             loading='lazy'
           />
         </a>
         <Image
-          src={NubiImage}
-          alt="" className={project == 3 ? "Accord_img active" : "Accord_img"}
+          src={"https://drive.google.com/uc?export=view&id=1DKJOLAgNoUnPtDpA6jw8y9kaGxASy8MX"}
+          width={900}
+          height={1000}
+          alt="Imágen de proyecto Nubi intranet-crm"
+          className={project == 3 ? "Accord_img active" : "Accord_img"}
           loading='lazy'
         />
       </div>
