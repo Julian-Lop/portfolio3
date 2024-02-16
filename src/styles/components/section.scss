@@ -146,39 +146,8 @@
                 height: 80%;
                 width: 100%;
 
-                .color-image{
-                    position: absolute;
-                    inset: 0;
-                    background-image: url("../../../public/images/Sprite.webp");
-                    background-size: cover;
-                    background-position: 0% 0%;
-                    height: 600px;
-                    width: 552px;
-                    margin-top: -56px;
-                    margin-left: 0px;
-
-                    &.animatedProfile{
-                        animation:  moveProfile 2.5s 1s steps(23) forwards;
-                    }
-                    
-
-                    @include mobile{
-                        width: 320px;
-                        height: 351.5px;
-                        margin-top: -20px;
-                        margin-left: auto;
-                        margin-right: auto;
-                    }
-
-                    @include tablet{
-                        // height: 95%;
-                        // width: 100%;
-                        width: 420px;
-                        height: 451.5px;
-                        margin-top: -20px;
-                        margin-left: auto;
-                        margin-right: auto;
-                    }
+                img{
+                  animation: fade 2s;
                 }
             }
 
