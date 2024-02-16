@@ -61,8 +61,14 @@ export default function Home() {
           </div>
           <div>
             <div className="image">
-              <div className={`color-image ${!slowConnection && 'animatedProfile'}`} />
-              {/* <Image src={ProfileGrey} alt="profile image" style={{objectFit:'cover',width:'100%', height:'100%'}} /> */}
+              {/* <div className={`color-image ${!slowConnection && 'animatedProfile'}`} /> */}
+              <Image
+                src={"https://drive.google.com/uc?export=view&id=1DCgnJsvuiA69iFLTflGF9Gvb-keGCp3W"}
+                width={1784}
+                height={1939}
+                alt="profile image"
+                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
+              />
             </div>
           </div>
         </Section>
