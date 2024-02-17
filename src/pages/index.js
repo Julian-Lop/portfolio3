@@ -24,12 +24,12 @@ export default function Home() {
 
     const connection = navigator.connection;
 
-    if (connection.downlink < 6) {
+    if (connection.downlink < 5) {
       setSlowConnection(true)
 
       setTimeout(() => {
         setSlowConnection(false)
-      }, 6000/connection.downlink);
+      }, 4000/connection.downlink);
     }
    
     setReady(true)
