@@ -24,18 +24,11 @@ export default function Home() {
     const connection = navigator.connection;
 
     setTimeout(() => {
-    }, 3000/connection.downlink);
+    }, 4000/connection.downlink);
 
     setReady(true)
+    setAnimate(true)
   }, [])
-
-  useEffect(() => {
-    if (ready) {
-      setTimeout(() => {
-        setAnimate(true)
-      }, 2000);
-    }
-  }, [ready])
   
   if (!ready) return (<>
     <i className='icon icon-menu rotate-infinite' style={{ margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, position: 'absolute' }}/>
