@@ -17,7 +17,6 @@ export default function ProjectGallery() {
             height={1000}
             alt="imágen de proyecto Emilan Web"
             className={project == 1 ? "Accord_img active" : "Accord_img"}
-            loading='lazy'
           />
         </a>
         <a href="https://sirimiri.store" target='_blank'>

@@ -86,7 +86,6 @@ export default function Home() {
                 height={1360}
                 alt="About image"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', boxShadow: '0px 0px 10px 4px rgba(128, 147, 255, 0.25)' }}
-                loading="lazy"
               />
             </div>
           </div>
