@@ -15,8 +15,6 @@ export default function Home() {
   // Ready page
   const [ready, setReady] = useState(false)
 
-  const [animate, setAnimate] = useState(false)
-
   const [currentSection, setCurrentSection] = useState('Home')
 
   useEffect(() => {
@@ -25,7 +23,6 @@ export default function Home() {
 
     setTimeout(() => {
       setReady(true)
-      setAnimate(true)
     }, 2000/connection.downlink);
 
   }, [])
@@ -40,7 +37,7 @@ export default function Home() {
         }
         <Section classes={'One'} id={'Home'} setCurrentSection={setCurrentSection}>
           <div>
-            {ready && <h1>Julian A. Lopez {animate ? <span>|</span> : '|'}</h1>}
+            <h1>Julian A. Lopez {ready ? <span>|</span> : '|'}</h1>
             <h3>Desarrollador Web <span>{'</>'}</span></h3>
           </div>
           <div>
