@@ -66,36 +66,34 @@
                 color: variables.$color2 !important;
             }
         }
+    }
 
-        
+    .icon{
+      background-color: transparent;
+      width: 60px;
+      height: 50px;
+      margin-right: 10px;
+      transition: all 0.25s;
 
-        .icon{
-            background-color: transparent;
-            width: 60px;
-            height: 50px;
-            margin-right: 10px;
-            transition: all 0.25s;
+      @include mobile{
+          width: 40px;
+          height: 30px;
+      }
 
-            @include mobile{
-                width: 40px;
-                height: 30px;
-            }
+      &.icon-user{
+          margin-left: 6px;
+          margin-right: 5px;
 
-            &.icon-user{
-                margin-left: 6px;
-                margin-right: 5px;
+          @include mobile{
+              margin-left: 3px;
+              margin-right: 7px;
+          }
+      }
 
-                @include mobile{
-                    margin-left: 3px;
-                    margin-right: 7px;
-                }
-            }
-
-            &.icon-skills{
-                margin-bottom: -6px;
-                margin-left: -2px;
-                margin-right: 13px;
-            }
-        }
+      &.icon-skills{
+          margin-bottom: -6px;
+          margin-left: -2px;
+          margin-right: 13px;
+      }
     }
 }

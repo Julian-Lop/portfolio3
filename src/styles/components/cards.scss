@@ -10,149 +10,70 @@
         gap: 32px;
         padding: 32px 0px;
     }
+}
 
+.Card{
+  width: 200px;
+  height: 200px;
+  background: variables.$color_white;
+  margin: 28px 0 28px 0;
+  padding: 22px;
+  box-shadow: 0px 4px 10px 5px rgba(128, 147, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
+  view-timeline-name: --card;
+  view-timeline-axis: block;
 
-    .Card{
-        width: 26%;
-        background: variables.$color_white;
-        margin: 28px 0 28px 0;
-        padding: 22px;
-        box-shadow: 0px 4px 10px 5px rgba(128, 147, 255, 0.25);
+  animation-timeline: --card;
+  animation-name: fadeCard;
 
-        view-timeline-name: --card;
-        view-timeline-axis: block;
+  animation-range: entry 0% cover 50%;
+  animation-fill-mode: both;
 
-        animation-timeline: --card;
-        animation-name: fadeCard;
+  @include mobile{
+      width: 80%;
+      margin: 0px auto;
+      box-shadow: 0px 4px 10px 5px rgba(128, 147, 255, 0.25) !important;
+  }
 
-        animation-range: entry 0% cover 50%;
-        animation-fill-mode: both;
+  @include tablet{
+      width: 30%;
+      box-shadow: 0px 4px 10px 5px rgba(128, 147, 255, 0.25) !important;
+  }
 
-        @include mobile{
-            width: 80%;
-            margin: 0px auto;
-            box-shadow: 0px 4px 10px 5px rgba(128, 147, 255, 0.25) !important;
-        }
+  .icon{
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0px 0px 5px rgba(128, 147, 255, 0.5));
+    animation: floatingElement 2.5s calc(1s * var(--index)) infinite;
 
-        @include tablet{
-            width: 30%;
-            box-shadow: 0px 4px 10px 5px rgba(128, 147, 255, 0.25) !important;
-        }
-
-        .icon-section{
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .icon{
-                width: 60px;
-                height: 60px;
-
-                @include mobile{
-                    width: 35px;
-                    height: 35px; 
-                    margin-bottom: 10px;
-                }
-
-                @include tablet{
-                    width: 45px;
-                    height: 45px; 
-                    margin-bottom: 10px;
-                }
-
-                &.icon-nodejs{
-                    width: 52px;
-                    height: 49px;
-
-                    @include mobile{
-                        width: 32px;
-                        height: 29px; 
-                    }
-                    
-                    @include tablet{
-                        width: 42px;
-                        height: 39px; 
-                    }
-                }
-
-                &.icon-sass{
-                    width: 74px;
-                    height: 49px;
-
-                    @include mobile{
-                        width: 54px;
-                        height: 29px; 
-                    }
-
-                    @include tablet{
-                        width: 64px;
-                        height: 39px; 
-                    }
-                }
-
-                &.icon-nextjs{
-                    width: 92px;
-                    height: 33px;
-
-                    @include mobile{
-                        width: 72px;
-                        height: 23px; 
-                    }
-
-                    @include tablet{
-                        width: 82px;
-                        height: 30px; 
-                    }
-                }
-
-                &.icon-less{
-                    width: 80px;
-                    height: 80px;
-
-                    @include mobile{
-                        width: 60px;
-                        height: 60px; 
-                    }
-
-                    @include tablet{
-                        width: 70px;
-                        height: 70px; 
-                    }
-                }
-            }
-
-            @include mobile{
-                height: 30px;
-            }
-
-            @include tablet{
-                height: 50px;
-            }
-        }
-
-        .info-section{
-            color: rgba(variables.$color5,0.8);
-            
-            h4{
-                font-family: variables.$fontBold;
-                font-size: 24px;
-
-                @include mobile{
-                    font-size: 18px;
-                }
-
-                @include tablet{
-                    font-size: 20px;
-                }
-            }
-
-            p{
-                font-family: variables.$fontRegular;
-                color: rgba(variables.$color5,0.8);
-                font-size: 16px;
-            }
-        }
+    @include tablet{
+        width: 45px;
+        height: 45px; 
+        margin-bottom: 10px;
     }
+
+    &.icon-nodejs{
+        width: 52px;
+        height: 49px;
+    }
+
+    &.icon-sass{
+        width: 74px;
+        height: 49px;
+    }
+
+    &.icon-nextjs{
+        width: 92px;
+        height: 33px;
+    }
+
+    &.icon-less{
+            width: 80px;
+            height: 80px;
+    }
+  }
 }
