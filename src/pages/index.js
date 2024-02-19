@@ -24,19 +24,20 @@ export default function Home() {
     const connection = navigator.connection;
 
     setTimeout(() => {
-    }, 4000/connection.downlink);
+      setReady(true)
+      setAnimate(true)
+    }, 2000/connection.downlink);
 
-    setReady(true)
-    setAnimate(true)
   }, [])
-  
-  if (!ready) return (<>
-    <i className='icon icon-menu rotate-infinite' style={{ margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, position: 'absolute' }}/>
-  </>)
 
   return (
     <>
       <Layout currentSection={currentSection} setCurrentSection={setCurrentSection}>
+        {!ready &&
+          <div style={{  margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, width: '100dvw', height:'100dvh',position: 'fixed', background: '#f2f2f2', zIndex: 10000 }}>
+            <i className='icon icon-menu rotate-infinite' style={{ margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, position: 'absolute' }} />
+          </div>
+        }
         <Section classes={'One'} id={'Home'} setCurrentSection={setCurrentSection}>
           <div>
             {ready && <h1>Julian A. Lopez {animate ? <span>|</span> : '|'}</h1>}
