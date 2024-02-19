@@ -14,7 +14,6 @@ export default function Home() {
 
   // Ready page
   const [ready, setReady] = useState(false)
-  const [slowConnection, setSlowConnection] = useState(false)
 
   const [animate, setAnimate] = useState(false)
 
@@ -24,20 +23,14 @@ export default function Home() {
 
     const connection = navigator.connection;
 
-    if (connection.downlink < 5) {
-      setSlowConnection(true)
+    setTimeout(() => {
+    }, 3000/connection.downlink);
 
-      setTimeout(() => {
-        setSlowConnection(false)
-      }, 2000/connection.downlink);
-    }
-   
     setReady(true)
-    
   }, [])
 
   useEffect(() => {
-    if (ready && !slowConnection) {
+    if (ready) {
       setTimeout(() => {
         setAnimate(true)
       }, 2000);
@@ -50,13 +43,10 @@ export default function Home() {
 
   return (
     <>
-      {slowConnection && <div div style={{ width: '100%', height: '100vh', position: 'fixed', zIndex: 10000, background: 'white' }}>
-        <i className='icon icon-menu rotate-infinite' style={{ margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, position: 'absolute' }}/>
-      </div>}
       <Layout currentSection={currentSection} setCurrentSection={setCurrentSection}>
         <Section classes={'One'} id={'Home'} setCurrentSection={setCurrentSection}>
           <div>
-            {!slowConnection && <h1>Julian A. Lopez {animate ? <span>|</span> : '|'}</h1>}
+            {ready && <h1>Julian A. Lopez {animate ? <span>|</span> : '|'}</h1>}
             <h3>Desarrollador Web <span>{'</>'}</span></h3>
           </div>
           <div>
@@ -67,7 +57,6 @@ export default function Home() {
                 width={1784}
                 height={1939}
                 alt="profile image"
-                style={{ objectFit: 'cover', width: '100%', height: '100%' }}
               />
             </div>
           </div>
