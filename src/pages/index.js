@@ -72,11 +72,12 @@ export default function Home() {
             
             <div className="ColumnRight">
               <Image
-                src="https://drive.google.com/uc?export=view&id=1_umyps4rTgYhG9U926LB6ikSP-TtSg-a"
+                src={"https://drive.google.com/uc?export=view&id=1UcW6uhHhYI9emB_BK5TvpnF8sJ63aZDE"}
                 width={800}
                 height={1360}
                 alt="About image"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', boxShadow: '0px 0px 10px 4px rgba(128, 147, 255, 0.25)' }}
+                className="ImageAbout"
+                loading="lazy"
               />
             </div>
           </div>
