@@ -79,8 +79,8 @@ export default function ProjectGallery() {
           </h3>
           <div className="Accordion_body">
             <p className="Accordion_descript">
-                Tienda en Sirmiri. Tienda en Shopify a la cuál se le hicieron modificaciones de maquetación,
-                para adaptar los colores y ciertos componentes a los requerimientos del cliente.
+                Tienda en Sirmiri. Tienda de venta de productos Wayú en Estados Unidos,
+                responsive y con carrito de compra.
             </p>
           </div>
         </li>
@@ -99,8 +99,8 @@ export default function ProjectGallery() {
           </h3>
           <div className="Accordion_body">
             <p className="Accordion_descript">
-                Intranet y crm sencillo, para manejar los tiempos de los empleados y las información de los clientes.
-                Basado en React, Redux, Sass y utilizando websockets.
+                Intranet y CRM, para manejar los tiempos de los empleados y las información de los clientes.
+                Basado en React, Redux, Express, Sass, websockets, entre otras.
             </p>
           </div>
         </li>

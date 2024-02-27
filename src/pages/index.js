@@ -8,6 +8,7 @@ import Section from "@/components/Section";
 import Button from "@/components/buttons/Button";
 import Layout from "@/components/layouts/Layout";
 import ProjectGallery from "@/components/ProjectGallery";
+import Loading from "@/components/Loading";
 
 
 export default function Home() {
@@ -31,13 +32,11 @@ export default function Home() {
     <>
       <Layout currentSection={currentSection} setCurrentSection={setCurrentSection}>
         {!ready &&
-          <div style={{  margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, width: '100dvw', height:'100dvh',position: 'fixed', background: '#f2f2f2', zIndex: 10000 }}>
-            <i className='icon icon-menu rotate-infinite' style={{ margin: 'auto', top: 0, bottom: 0, left: 0, right: 0, position: 'absolute' }} />
-          </div>
+          <Loading/>
         }
         <Section classes={'One'} id={'Home'} setCurrentSection={setCurrentSection}>
           <div>
-            <h1>Julian A. Lopez {ready ? <span>|</span> : '|'}</h1>
+            <h1>Julian A. Lopez <span>|</span></h1>
             <h3>Desarrollador Web <span>{'</>'}</span></h3>
           </div>
           <div>
@@ -60,11 +59,9 @@ export default function Home() {
                 Desarrollo, diseño e implemento soluciones de software enfocadas en tecnologías
                 web.
                 <br/>
-                Cuento con experiencia como desarrollador web, haciendo maquetación fiel
-                al diseño, implementando lógica y buenas prácticas de programación para asegurar
-                escalabilidad, fiabilidad y eficiencia del producto. He propuesto e implementado, 
-                tanto tecnologías, como patrones de diseño y arquitectura de software para mejorar la
-                eficiencia, fiabilidad y procesos de creación.
+                Cuento con experiencia como desarrollador web, desde Landing Pages, Tiendas virtuales,
+                Blogs, hasta Aplicaciones a medida para funciones especificas. Basandome en las buenas
+                prácticas de desarrollo, patrones de diseño y arquitectura.
               </p>
 
               <Button text={'Descargar CV'} icon={'icon-download1'} download={true} />
