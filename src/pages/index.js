@@ -40,7 +40,7 @@ export default function Home() {
             <h3>Desarrollador Web <span>{'</>'}</span></h3>
           </div>
           <div>
-            <div className="image">
+            {ready ? <div className="image">
               {/* <div className={`color-image ${!slowConnection && 'animatedProfile'}`} /> */}
               <Image
                 src={"https://drive.google.com/uc?export=view&id=1DCgnJsvuiA69iFLTflGF9Gvb-keGCp3W"}
@@ -48,7 +48,7 @@ export default function Home() {
                 height={1939}
                 alt="profile image"
               />
-            </div>
+            </div> : <></>}
           </div>
         </Section>
         <Section classes={'Two'} id={'Aboutme'} setCurrentSection={setCurrentSection}>
