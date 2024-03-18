@@ -56,12 +56,10 @@ export default function Home() {
           <div className="Content">
             <div className="ColumnLeft">
               <p>
-                Desarrollo, diseño e implemento soluciones de software enfocadas en tecnologías
-                web.
-                <br/>
-                Cuento con experiencia como desarrollador web, desde Landing Pages, Tiendas virtuales,
-                Blogs, hasta Aplicaciones a medida para funciones especificas. Basandome en las buenas
-                prácticas de desarrollo, patrones de diseño y arquitectura.
+                Soy Julian Lopez, un apasionado del desarrollo web centrado en el pensamiento
+                crítico y la simplicidad en el diseño de soluciones. Destaco por mi capacidad
+                de comunicación y adaptación rápida a nuevas tecnologías. Emocionado por crecer
+                profesionalmente y contribuir a proyectos con mis habilidades y pasión por la tecnología.
               </p>
 
               <Button text={'Descargar CV'} icon={'icon-download1'} download={true} />
